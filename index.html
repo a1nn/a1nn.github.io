@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
     <style>
         body {
             background: linear-gradient(to right, #cfd9df, #e2ebf0);
@@ -27,10 +28,34 @@
 </head>
 <body>
     <div class="text">
-        <h1 style="font-family: 'Inconsolata', monospace; font-size: 50px">¡hola! (^-^*)</h1>
+        <div id="app" style="font-family: 'Inconsolata', monospace; font-size: 50px"></div>
         <h3 style="font-family: 'Lato', sans-serif;">Thanks for stopping by!<br><br>Feel free to visit me through any of the links below!</h3>
         <h3><a href="https://steamcommunity.com/id/a1nn"><i class="fab fa-steam"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://twitter.com/a1nn_"><i class="fab fa-twitter"></i></a></h3>
     </div>
 </body>
+<script>
+    var app = document.getElementById('app');
+
+    var typewriter = new Typewriter(app, {
+        loop: true
+    });
+
+    typewriter.typeString('¡hola!')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('hello!')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('bonjour!')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('こんにちは!')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('你好！')
+        .pauseFor(2500)
+        .deleteAll()
+        .start();
+</script>
 </html>
